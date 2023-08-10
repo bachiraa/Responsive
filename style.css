@@ -56,13 +56,6 @@ font-weight: 500;
 color: orange;
  }
 
- .circular{
-   height: 100px;
-   width: 100px;
-   background-color: red;
-   position: relative;
-   transform: scale(2);
- }
  .circular .inner{
    position: absolute;
    z-index: 6;
