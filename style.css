@@ -1,0 +1,114 @@
+ .content{
+    display: flex;
+ }
+
+
+ @media screen and (max-width: 768px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+     }
+ }
+ @media screen and (max-width: 568px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+     }
+ }
+.box{
+    background-color: aliceblue;
+    padding: 4em 3em;
+    position: relative;
+    border-radius: 20px;
+}
+svg{
+    height: 150px;
+    width: 150px;
+}
+ svg circle{
+fill: none;
+stroke: orange;
+stroke-width: 10px;
+transform: translate(5px, 5px);
+stroke-linecap: round;
+stroke-dasharray: 440;
+stroke-dashoffset: 440;
+ }
+ svg circle:nth-child(1){
+    stroke: aliceblue;
+    stroke-dashoffset: 0;
+ }
+ svg circle:nth-child(2){
+    animation: circle 2s forwards;
+ }
+ @keyframes circle{
+    to{
+stroke-dashoffset: 220;
+    }
+ }
+ span{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 2em;
+font-weight: 500;
+color: orange;
+ }
+
+ .circular{
+   height: 100px;
+   width: 100px;
+   background-color: red;
+   position: relative;
+   transform: scale(2);
+ }
+ .circular .inner{
+   position: absolute;
+   z-index: 6;
+   top: 50%;
+   left: 50%;
+   height: 80px;
+   width: 80px;
+   margin: -40px 0 0 -40px;
+   background-color: aqua;
+   border-radius: 100%;
+   box-shadow: 0 1px 0 blue ;
+ }
+
+ .circle .bar .progress{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: orange;
+   -webkit-border-radius: 100% ;
+   clip: rect(0px, 50px, 100px, 0px);
+   background-color: brown;
+  
+ }
+ .circle .left .progress{
+   z-index: 1;
+   animation: left 4s linear both;
+  }
+  @keyframes left{
+   100%{
+      transform: rotate(180deg);
+   }
+  }
+
+ .circle .right .progress{
+  z-index: 3;
+  transform: rotate(180deg);
+  animation: left 4s linear both;
+ }
+
+ .circle .right .progress{
+   animation: left 4s linear both;
+animation-delay: 4s;
+ }
+
+ @keyframes right{
+   100%{
+      transform: rotate(180deg);
+   }
+  }
